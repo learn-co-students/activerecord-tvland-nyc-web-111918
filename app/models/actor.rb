@@ -7,15 +7,15 @@ class Actor < ActiveRecord::Base
   end
 
   def list_roles
-    holder = []
+    show_array = []
     characters.each do |character|
       shows.each do |show|
-        holder << "#{character.name} - #{show.name}"
+        show_array << "#{character.name} - #{show.name}"
       end
     end
-    holder
+    show_array
   end
 
-  
+
 
 end

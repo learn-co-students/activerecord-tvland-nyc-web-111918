@@ -5,7 +5,6 @@ class Show < ActiveRecord::Base
   def build_network(ntwk)
     network = Network.find_or_create_by(ntwk)
     self.network_id = network.id
-    self
   end
 
   def network

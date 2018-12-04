@@ -8,9 +8,9 @@ class Character < ActiveRecord::Base
   end
 
   def build_show(show)
-    show = Show.find_or_create_by(show)
-    self.show_id = show.id
-    show
+    new_show = Show.find_or_create_by(show)
+    self.show_id = new_show.id
+    new_show
   end
 
 end
